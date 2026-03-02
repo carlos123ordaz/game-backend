@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "scripts": {
         "dev": "node index.js",
-        "build": "tsc",
         "start": "node index.js"
     },
     "dependencies": {
