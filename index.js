@@ -9,6 +9,8 @@ const { setupPixelAdventureNamespace } = require('./games/pixel-adventure')
 const { setupWordSearchNamespace } = require('./games/word-search')
 const { setupLudoNamespace } = require("./games/ludo");
 const { setupMinesweeperNamespace } = require("./games/minesweeper");
+const { setupPuzzleNamespace } = require('./games/puzzle')
+const { setupAnonQuestionsNamespace } = require('./games/anonymous-questions')
 
 const app = express()
 const httpServer = createServer(app)
@@ -35,6 +37,9 @@ setupPixelAdventureNamespace(io)
 setupWordSearchNamespace(io)
 setupLudoNamespace(io)
 setupMinesweeperNamespace(io)
+setupPuzzleNamespace(io)
+setupAnonQuestionsNamespace(io)
+
 
 const PORT = process.env.PORT || 3001
 httpServer.listen(PORT, () => {
